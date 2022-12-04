@@ -1,6 +1,6 @@
 body {
     background: black;
-    
+
 }
 
 #wrapper {
@@ -26,7 +26,7 @@ body {
 header {
     background-color:darkgray;
     height: 150px;
-    padding: 4px; 
+    padding: 4px;
 }
 
 header h1 {
@@ -56,7 +56,7 @@ ul.main_menu {
     display: inline;
     padding: 0 10px 0 10px;
     font-size: 16px;
-    font-color: ffff;
+    color: ffff;
 }
 .main_menu a {
     text-decoration: none;
