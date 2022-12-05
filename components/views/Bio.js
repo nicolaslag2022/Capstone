@@ -1,7 +1,8 @@
 import html from "html-literal";
-
+import aboutmepic from "../../assets/images/aboutmepic.jpg";
 export default () => html`
-  <div id="wrapper">
+  <div>
+    <img src=${aboutmepic} />
     <p style="color:white">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -11,6 +12,5 @@ export default () => html`
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
     </p>
-    <img src="aboutmepic.jpg" class="image3" />
   </div>
 `;
