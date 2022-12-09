@@ -5,16 +5,29 @@ body {
 
 #nav-bar {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    display: inline;
+    list-style: none;
+
+}
+
+#nav ul {
+    display: inline;
 }
 
 header h1 {
     text-align: center;
+    font-family: 'Rye', cursive;
+    font-size: 60px;
 }
 
 header h2 {
     text-align: center;
     color:#fff;
     line-height: 50px;
+    font-family: 'Rye', cursive;
+    font-size: 45px;
 }
 
 #homepic {
