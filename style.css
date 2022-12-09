@@ -1,78 +1,43 @@
 body {
     background: black;
-    
+
 }
 
-#wrapper {
-    max-width: 960px;
-    margin: 0 auto;
-    background-color: rgb(161, 157, 160);
-    padding: 32px;
-}
-
-.image1 {
-    float:left;
-    height:150px;
-    width:150px;
-    border-radius: 50%;
-}
-
-.image2 {
+#nav-bar {
     text-align: center;
-    height: 700px;
-    width: 100%
+    display: flex;
+    flex-direction: column;
+    display: inline;
+    list-style: none;
+
 }
 
-header {
-    background-color:darkgray;
-    height: 150px;
-    padding: 4px; 
+#nav ul {
+    display: inline;
 }
 
 header h1 {
     text-align: center;
-    color:rgb(11, 50, 62);
-    line-height: 50px;
+    font-family: 'Rye', cursive;
+    font-size: 60px;
 }
 
 header h2 {
     text-align: center;
     color:#fff;
     line-height: 50px;
+    font-family: 'Rye', cursive;
+    font-size: 45px;
 }
 
-.main_menu {
-    padding: 5px 0 5px 0;
-    text-align: center;
-    line-height: 32px;
-    background-color: #c3c0d4c5
+#homepic {
+    display: grid;
+    place-items: center;
 }
 
-ul.main_menu {
-    margin-top: 15px;
+#biopage {
+    display: grid;
+    place-items: center;
 }
-
-.main_menu li {
-    display: inline;
-    padding: 0 10px 0 10px;
-    font-size: 16px;
-    font-color: ffff;
-}
-.main_menu a {
-    text-decoration: none;
-    color: #ffff;
-    padding: 8px;
-}
-
-.main_menu a:hover {
-    color: #030304c5
-}
-
-.image3 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-        }
-
 
 
