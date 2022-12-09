@@ -1,6 +1,6 @@
 export default [
-  { title: "FlavorPairing", text: "Flavor Pairing" },
-  { title: "Bio", text: "Bio" },
   { title: "Home", text: "Home" },
+  { title: "Bio", text: "Bio" },
+  { title: "FlavorPairing", text: "Flavor Pairing" },
   { title: "Recipe", text: "Recipe" }
 ];
