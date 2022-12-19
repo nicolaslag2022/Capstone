@@ -57,9 +57,38 @@ header h2 {
     font-size: 45px;
 }
 
-#bio {
-    display: grid;
-    place-items: center;
+.bioheading {
+    text-align: center;
+    color:#fff;
+}
+
+.flavorheading {
+    background-color: white;
+    text-align: center;
+    color: black;
+}
+
+.box{
+    box-sizing: border-box;
+    padding: 20px;
+    }
+
+.table {
+    background-color: #ff7700;
+    text-align: center;
+    grid-row: 3;
+    }
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-radius: 30px;
+    padding: 20px;
+}
+#gatorpic {
+    align-items: center;
+    justify-content: center;
+
 }
 
 .gallery-container {
@@ -80,12 +109,12 @@ header h2 {
     width: 8px;
     height: 8px;
     cursor: pointer;
-    background: #212121;
+    background: white;
     border-radius: 100%;
 }
 
 .thumbnails div.highlighted {
-    background-color: #777;
+    background-color: white;
 }
 
 .slides {
@@ -113,5 +142,5 @@ header h2 {
 }
 
 .slides::-webkit-scrollbar {
-    display: none;
+    display: white;
 }
