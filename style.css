@@ -1,10 +1,17 @@
+/* in HTML: <ul class="hidden--mobile"> */
 @media (max-width: 549px) {
     .hidden--mobile {
-    display: none !important;
+    display: none;
     }
 }
 
 @media (min-width: 549px) {
+    nav > .fa-bars {
+    display: none;
+    }
+}
+
+@media (min-width: 550px) {
     nav > ul {
         display: flex;
         justify-content: space-evenly;
@@ -15,6 +22,12 @@
     }
 }
 
+@media (min-width: 550px){
+    table {
+        display: center;
+        padding: 0 0;
+    }
+}
 body {
     background: black;
     width: 100%;
