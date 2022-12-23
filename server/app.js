@@ -3,6 +3,7 @@ const express = require("express");
 // Initialize the Express application
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+const brewPairings = require("./routers/bbbrew");
 
 dotenv.config();
 
