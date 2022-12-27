@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const brewPairings = new mongoose.Schema({
+const brewPairingsSchema = new mongoose.Schema({
   meat: {
     type: String,
     required: true,
@@ -13,6 +13,6 @@ const brewPairings = new mongoose.Schema({
   }
 });
 
-const brewPairings = mongoose.model("Brew", brewPairings);
+const brewPairings = mongoose.model("Brew", brewPairingsSchema);
 
-module.exports = Brew;
+module.exports = brewPairings;
