@@ -11,6 +11,7 @@ export default () => html`
       <!-- your other form fields go here -->
       <button type="submit">Send</button>
     </form>
+    <ion-icon name="logo-twitter"></ion-icon>
     <style></style>
   </footer>
 `;

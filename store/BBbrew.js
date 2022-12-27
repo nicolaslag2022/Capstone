@@ -1,4 +1,5 @@
 export default {
   header: "BBbrew",
-  view: "BBbrew"
+  view: "BBbrew",
+  brewPairings: {}
 };
