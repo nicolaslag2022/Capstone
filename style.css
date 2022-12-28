@@ -1,19 +1,59 @@
-body {
-    background: #212121;
-
+/* in HTML: <ul class="hidden--mobile"> */
+@media (max-width: 549px) {
+    .hidden--mobile {
+    display: none;
+    }
 }
 
-#nav-bar {
+@media (min-width: 549px) {
+    nav > .fa-bars {
+    display: none;
+    }
+}
+
+@media (min-width: 550px) {
+    nav > ul {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 0;
+        list-style-type: none;
+        font-family: 'Rye', cursive;
+
+    }
+}
+
+@media (min-width: 550px){
+    table {
+        display: center;
+        padding: 0 0;
+    }
+}
+body {
+    background: white;
+    width: 100%;
+}
+
+#homepage {
     text-align: center;
+}
+
+.fire {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    justify-self: center;
+}
+
+nav > .fa-bars {
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+nav {
     display: flex;
     flex-direction: column;
-    display: inline;
-    list-style: none;
-
-}
-
-ul#horizontal-list {
-    display: inline;
+    background-color: white;
 }
 
 header h1 {
@@ -30,14 +70,97 @@ header h2 {
     font-size: 45px;
 }
 
-#homepic {
-    display: grid;
-    place-items: center;
+.bioheading {
+    text-align: center;
+    color:#fff;
 }
 
-#biopage {
+.flavorheading {
+    background-color: white;
+    text-align: center;
+    color: black;
+}
+
+.box{
+    box-sizing: border-box;
+    padding: 20px;
+    }
+
+.table {
+    background-color: #ff7700;
+    text-align: center;
+    grid-row: 3;
+    }
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-radius: 30px;
+    padding: 20px;
+}
+#gatorpic {
+    align-items: center;
+    justify-content: center;
+
+}
+
+.gallery-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.thumbnails {
+    position: absolute;
+    bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.thumbnails div {
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    background: white;
+    border-radius: 100%;
+}
+
+.thumbnails div.highlighted {
+    background-color: white;
+}
+
+.slides {
+    margin: 0 16px;
     display: grid;
-    place-items: center;
+    grid-auto-flow: column;
+    gap: 1rem;
+    width: 540px;
+    padding: 0 0.25rem;
+    height: 720px;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.slides > div {
+    scroll-snap-align: start;
+}
+
+.slides img {
+    width: 540px;
+    height: 720px;
+    object-fit: contain;
+}
+
+.slides::-webkit-scrollbar {
+    display: white;
 }
 
 
+.drink {
+    text-align: center;
+    display: inline-block;
+    margin: 0 60% 0 4%
+}

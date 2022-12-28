@@ -10,22 +10,56 @@ dotenv.config();
 const router = new Navigo("/");
 
 function render(state = store.Home) {
-  console.table(`${state}`);
+  console.table(state);
   document.querySelector("#root").innerHTML = `
   ${Header(state)}
   ${Nav(store.Links)}
   ${Main(state)}
   ${Footer()}
   `;
-  afterRender();
+  afterRender(state);
   router.updatePageLinks();
 }
 
-function afterRender() {
+function afterRender(state) {
   // add menu toggle to bars icon in nav bar
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
+  if (state.view === "Bio") {
+    const slideGallery = document.querySelector(".slides");
+    const slides = slideGallery.querySelectorAll("div");
+    const thumbnailContainer = document.querySelector(".thumbnails");
+    const slideCount = slides.length;
+    const slideWidth = 540;
+
+    const highlightThumbnail = () => {
+      thumbnailContainer
+        .querySelectorAll("div.highlighted")
+        .forEach(el => el.classList.remove("highlighted"));
+      const index = Math.floor(slideGallery.scrollLeft / slideWidth);
+      thumbnailContainer
+        .querySelector(`div[data-id="${index}"]`)
+        .classList.add("highlighted");
+    };
+
+    const scrollToElement = el => {
+      const index = parseInt(el.dataset.id, 10);
+      slideGallery.scrollTo(index * slideWidth, 0);
+    };
+
+    thumbnailContainer.innerHTML += [...slides]
+      .map((slide, i) => `<div data-id="${i}"></div>`)
+      .join("");
+
+    thumbnailContainer.querySelectorAll("div").forEach(el => {
+      el.addEventListener("click", () => scrollToElement(el));
+    });
+
+    slideGallery.addEventListener("scroll", e => highlightThumbnail());
+
+    highlightThumbnail();
+  }
 }
 
 router.hooks({
