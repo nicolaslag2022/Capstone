@@ -157,3 +157,10 @@ table, th, td {
 .slides::-webkit-scrollbar {
     display: white;
 }
+
+
+.drink {
+    text-align: center;
+    display: inline-block;
+    margin: 0 60% 0 4%
+}

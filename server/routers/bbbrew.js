@@ -2,11 +2,11 @@ const { Router, response } = require("express");
 const brewPairings = require("../models/BBbrew");
 const router = Router();
 
-router.post("/", (request, repsonse) => {
+router.post("/", (request, response) => {
   const brewPairings = new brewPairings(request.body);
   brewPairings.save((error, record) => {
     if (error) return response.status(500).json(error);
-    return repsonse.json(record);
+    return response.json(record);
   });
 });
 
@@ -39,10 +39,10 @@ router.put("/:id", (request, response) => {
     request.params.id,
     {
       $set: {
-        // Take note that the customer is not included, so it can't
         beef: body.beef,
         chicken: body.chicken,
-        pork: body.pork
+        pork: body.pork,
+        fish: body.fish
       }
     },
     {
