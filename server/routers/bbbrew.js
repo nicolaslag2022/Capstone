@@ -42,7 +42,11 @@ router.put("/:id", (request, response) => {
         beef: body.beef,
         chicken: body.chicken,
         pork: body.pork,
-        fish: body.fish
+        fish: body.fish,
+        lager: body.lager,
+        americanpaleale: body.americanpaleale,
+        germanlager: body.germanlager,
+        pilsner: body.pilsner
       }
     },
     {

@@ -9,7 +9,8 @@ const brewPairingsSchema = new mongoose.Schema({
 
   beer: {
     type: [String],
-    required: true
+    required: true,
+    enum: ["Lager", "American Pale Ale", "German Lager", "Pilsner"]
   }
 });
 
