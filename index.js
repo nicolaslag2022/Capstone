@@ -60,6 +60,39 @@ function afterRender(state) {
 
     highlightThumbnail();
   }
+  if (state.view === "BBbrew") {
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+
+      const brewPairings = [];
+      for (let input of inputList.toppings) {
+        // If the value of the checked attribute is true then add the value to the toppings array
+        if (input.checked) {
+          brewPairings.push(input.value);
+        }
+      }
+
+      const requestData = {
+        customer: inputList.meat.value,
+        crust: inputList.meat.value
+      };
+      console.log("request Body", requestData);
+
+      axios
+        .post(`${process.env.Brew_Pairing_API_URL}/pizzas`, requestData)
+        .then(response => {
+          // Push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+          store.Bbbrew.brewPairings.push(response.data);
+          router.navigate("/BBbrew");
+        })
+        .catch(error => {
+          console.log("It puked", error);
+        });
+    });
+  }
 }
 
 router.hooks({
