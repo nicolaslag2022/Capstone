@@ -39,14 +39,8 @@ router.put("/:id", (request, response) => {
     request.params.id,
     {
       $set: {
-        beef: body.beef,
-        chicken: body.chicken,
-        pork: body.pork,
-        fish: body.fish,
-        lager: body.lager,
-        americanpaleale: body.americanpaleale,
-        germanlager: body.germanlager,
-        pilsner: body.pilsner
+        pairing: body.pairing,
+        userchoice: body.userchoice
       }
     },
     {

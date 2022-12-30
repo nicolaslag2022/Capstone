@@ -13,21 +13,21 @@ export default () => html`
           <legend>Choose your favorite BBQ and Brew Pairing:</legend>
 
           <div>
-            <input type="checkbox" id="chick" name="chicken" />
+            <input type="checkbox" id="chickenlager" name="chicken" />
             <label for="chicken">Chicken & Lager</label>
           </div>
 
           <div>
-            <input type="checkbox" id="beef" name="cow" />
+            <input type="checkbox" id="beefapa" name="cow" />
             <label for="cow">Beef & American Pale Ale</label>
           </div>
 
           <div>
-            <input type="checkbox" id="pork" name="pig" />
+            <input type="checkbox" id="porkgerlager" name="pig" />
             <label for="pig">Pork & German Lager</label>
           </div>
           <div>
-            <input type="checkbox" id="fish" name="ocean" />
+            <input type="checkbox" id="fishpilsner" name="ocean" />
             <label for="ocean">Fish & Pilsner</label>
           </div>
           <div>
