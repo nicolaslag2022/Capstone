@@ -5,6 +5,9 @@ import chicken from "../../assets/images/chicken.jpg";
 export default () => html`
   <section>
     <h2 class="flavorheading">Flavor Pairing</h2>
+    <p class="flavorpara">This easy to use guide takes the guess work out of pairing wood flavors with your favorite meats! Mesquite, hickory, and pecan <br>
+    are certainly the most popular wood flavors used today. Take a look and make sure you pick the right pairings ahead of your next BBQ outing!
+    </p>
     <div class="box">
       <table class="table" style="width:100%">
         <tr>
