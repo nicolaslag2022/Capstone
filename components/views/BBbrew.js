@@ -8,36 +8,45 @@ export default () => html`
         What goes better with BBQ then an ice cold beverage? Let us know <br />
         so we can create more content with your favorite pairings!
       </p>
-      <form>
-        <fieldset>
-          <legend>Choose your favorite BBQ and Brew Pairing:</legend>
+      <form method="POST" action="">
+        <label for="pair">Choose your favorite BBQ and Brew Pairing:</label>
 
-          <div>
-            <input type="checkbox" id="chickenlager" name="chicken" />
-            <label for="chicken">Chicken & Lager</label>
-          </div>
+        <label for="choice1">Chicken & Lager</label>
+        <input
+          type="checkbox"
+          id="chickenlager"
+          name="pair"
+          value="Chicken & Lager"
+        />
 
-          <div>
-            <input type="checkbox" id="beefapa" name="cow" />
-            <label for="cow">Beef & American Pale Ale</label>
-          </div>
+        <label for="choice2">Beef & American Pale Ale</label>
+        <input
+          type="checkbox"
+          id="beefapa"
+          name="pair"
+          value="Beef & American Pale Ale"
+        />
 
-          <div>
-            <input type="checkbox" id="porkgerlager" name="pig" />
-            <label for="pig">Pork & German Lager</label>
-          </div>
-          <div>
-            <input type="checkbox" id="fishpilsner" name="ocean" />
-            <label for="ocean">Fish & Pilsner</label>
-          </div>
-          <div>
-            <input type="label" id="blank" name="user" min="1" max="20" />
-            <label for="user">Other</label>
-          </div>
-          <div>
-            <input type="submit" value="Submit" />
-          </div>
-        </fieldset>
+        <label for="choice3">Pork & German Lager</label>
+        <input
+          type="checkbox"
+          id="porkgerlager"
+          name="pair"
+          value="Pork & German Lager"
+        />
+
+        <label for="choice4">Fish & Pilsner</label>
+        <input
+          type="checkbox"
+          id="fishpilsner"
+          name="pair"
+          value="Fish & Pilsner"
+        />
+        <div>
+          <label for="user">Other</label>
+          <input type="text" id="blank" name="other" min="1" max="20" />
+        </div>
+        <input type="submit" value="Submit" />
       </form>
     </div>
   </section>
