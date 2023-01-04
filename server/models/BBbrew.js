@@ -1,17 +1,11 @@
 const mongoose = require("mongoose");
 
 const brewPairingsSchema = new mongoose.Schema({
-  meat: {
-    type: String,
-    required: true,
-    enum: ["Beef", "Chicken", "Fish", "Pork"]
+  userchoice: {
+    type: String
+    //validate: /^[A-Za-z0-9 ]*$/
   },
-
-  beer: {
-    type: [String],
-    required: true,
-    enum: ["Lager", "American Pale Ale", "German Lager", "Pilsner"]
-  }
+  pairing: [String]
 });
 
 const brewPairings = mongoose.model("Brew", brewPairingsSchema);

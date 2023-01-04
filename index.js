@@ -10,7 +10,7 @@ dotenv.config();
 const router = new Navigo("/");
 
 function render(state = store.Home) {
-  console.table(state);
+  //console.table(state);
   document.querySelector("#root").innerHTML = `
   ${Header(state)}
   ${Nav(store.Links)}
@@ -60,7 +60,7 @@ function afterRender(state) {
 
     highlightThumbnail();
   }
-  if (state.view === "BBbrew") {
+  if (state.view === "Bbbrew") {
     document.querySelector("form").addEventListener("submit", event => {
       event.preventDefault();
 
@@ -68,25 +68,27 @@ function afterRender(state) {
       console.log("Input Element List", inputList);
 
       const brewPairings = [];
-      for (let input of inputList.toppings) {
+      for (let input of inputList.pair) {
         // If the value of the checked attribute is true then add the value to the toppings array
         if (input.checked) {
           brewPairings.push(input.value);
         }
       }
-
+      console.log(brewPairings);
       const requestData = {
-        customer: inputList.meat.value,
-        crust: inputList.meat.value
+        userchoice: inputList.other.value,
+        pairing: brewPairings
       };
       console.log("request Body", requestData);
 
       axios
-        .post(`${process.env.Brew_Pairing_API_URL}/pizzas`, requestData)
+        .post(`${process.env.Brew_Pairing_API_URL}/bbbrew`, requestData)
+        //.post(`${process.env.Brew_Pairing_API_TEST}/bbbrew`, requestData)
         .then(response => {
           // Push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-          store.Bbbrew.brewPairings.push(response.data);
-          router.navigate("/BBbrew");
+          //store.Bbbrew.brewPairings.push(response.data);
+          //router.navigate("/bbbrew");
+          console.log(response.data);
         })
         .catch(error => {
           console.log("It puked", error);
