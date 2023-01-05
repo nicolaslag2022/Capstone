@@ -167,10 +167,6 @@ table, th, td {
     object-fit: contain;
 }
 
-.slides::-webkit-scrollbar {
-    display: white;
-}
-
 .brewheading {
     color:#ff7700;
     font-size: 40px;

@@ -3,8 +3,8 @@ const brewPairings = require("../models/BBbrew");
 const router = Router();
 
 router.post("/", (request, response) => {
-  const brewPairings = new brewPairings(request.body);
-  brewPairings.save((error, record) => {
+  const newPairing = new brewPairings(request.body);
+  newPairing.save((error, record) => {
     if (error) return response.status(500).json(error);
     return response.json(record);
   });
