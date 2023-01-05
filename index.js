@@ -83,11 +83,9 @@ function afterRender(state) {
 
       axios
         .post(`${process.env.Brew_Pairing_API_URL}/bbbrew`, requestData)
-        //.post(`${process.env.Brew_Pairing_API_TEST}/bbbrew`, requestData)
         .then(response => {
-          // Push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-          //store.Bbbrew.brewPairings.push(response.data);
-          //router.navigate("/bbbrew");
+          store.Bbbrew.brewPairings.push(response.data);
+          router.navigate("/bbbrew");
           console.log(response.data);
         })
         .catch(error => {

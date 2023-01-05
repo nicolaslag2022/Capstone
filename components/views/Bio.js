@@ -9,10 +9,12 @@ import gallery7 from "../../assets/images/gallery7.jpg";
 import gallery8 from "../../assets/images/gallery8.jpg";
 export default () => html`
   <section>
-    <div class="bioheading">
-    <h1>Bio</h1>
-    <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div>
+    <h1 class="bioheader">Bio</h1>
+    <p class="bioheading">
+    My love of BBQ started a few years ago when I purchased my first Traeger Grill. It was love at first smoke! The ease of use and the ability to walk away and know your grill would still be at <br>
+    at the correct temp made it a perfect fit for the casual BBQ enthusiast. The smoker also gave me an opportunity to invite friends and family over for tailgating and summertime events. It was a great way <br>
+    way to bring the entire family together! This is a hobby that requires some early mornings but is absolutely something that everyone enjoys. I hope this site inspires others to start cooking! <br>
     </p>
     </div>
     <div>

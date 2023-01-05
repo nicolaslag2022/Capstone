@@ -28,8 +28,9 @@
         padding: 0 0;
     }
 }
+
 body {
-    background: white;
+    background: black;
     width: 100%;
 }
 
@@ -45,7 +46,7 @@ body {
 }
 
 nav > .fa-bars {
-    color: white;
+    color: #ff7700;
     text-align: center;
     display: none;
 }
@@ -53,7 +54,8 @@ nav > .fa-bars {
 nav {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: black;
+    color:#ff7700;
 }
 
 header h1 {
@@ -70,15 +72,28 @@ header h2 {
     font-size: 45px;
 }
 
+.bioheader {
+    color:#ff7700;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Rye', cursive;
+}
 .bioheading {
     text-align: center;
     color:#fff;
 }
 
 .flavorheading {
-    background-color: white;
+    background-color: black;
     text-align: center;
-    color: black;
+    color: #ff7700;
+    font-family: 'Rye', cursive;
+    font-size: 40px;
+}
+
+.flavorpara {
+    color: #fff;
+    text-align: center;
 }
 
 .box{
@@ -93,15 +108,13 @@ header h2 {
     }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid white;
     border-collapse: collapse;
-    border-radius: 30px;
     padding: 20px;
 }
 #gatorpic {
     align-items: center;
     justify-content: center;
-
 }
 
 .gallery-container {
@@ -154,13 +167,16 @@ table, th, td {
     object-fit: contain;
 }
 
-.slides::-webkit-scrollbar {
-    display: white;
+.brewheading {
+    color:#ff7700;
+    font-size: 40px;
+    font-family: 'Rye', cursive;
 }
 
-
 .drink {
+    font-size: 25px;
     text-align: center;
-    display: inline-block;
-    margin: 0 60% 0 4%
+    float: none ;
+    color: whitesmoke;
+    border: white;
 }
