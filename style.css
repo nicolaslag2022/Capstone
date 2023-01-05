@@ -1,7 +1,6 @@
 /* in HTML: <ul class="hidden--mobile"> */
 @media (max-width: 549px) {
     .hidden--mobile {
-    display: none;
     }
 }
 
@@ -11,7 +10,7 @@
     }
 }
 
-@media (min-width: 550px) {
+@media (min-width: 549px) {
     nav > ul {
         display: flex;
         justify-content: space-evenly;
@@ -98,7 +97,7 @@ header h2 {
 
 .box{
     box-sizing: border-box;
-    padding: 20px;
+    padding: 10px;
     }
 
 .table {
@@ -178,5 +177,8 @@ table, th, td {
     text-align: center;
     float: none ;
     color: whitesmoke;
+}
+
+.brewtext {
     border: white;
 }

@@ -1,7 +1,9 @@
 import html from "html-literal";
-import instagram from "../assets/images/instagram.png";
 export default () => html`
-  <footer style="background:#FF7700; padding:10px 20px; border-radius: 20px">
+  <footer
+    class="footer"
+    style="background:#FF7700; padding:10px 20px; border-radius: 20px"
+  >
     <form action="https://formspree.io/f/xknedjln" method="POST">
       <label>
         <h3>Subscribe to our Weekly Newsletter:</h3>
